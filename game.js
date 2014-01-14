@@ -1,4 +1,3 @@
-//<![CDATA[ 
 $(window).load(function(){
     var player = {
 	upQuarkClicks: 0,
@@ -885,4 +884,7 @@ $(window).load(function(){
 	update_total_clicks();
     }, 1000);
 });
-//]]>  
+
+$(function() {
+    $('#myTab a:first').tab('show')
+})
