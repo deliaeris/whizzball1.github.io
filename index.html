@@ -3,34 +3,35 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>Periodic Alchemy</title>
+    
     <script type='text/javascript' src='http://code.jquery.com/jquery-git2.js'></script>
-    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
     <script type='text/javascript' src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="local-style.css">
     <script src="game.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="local-style.css">
   </head>
+  
   <body>
     <div class="container">
       <h1>Periodic Alchemy <small>An Incremental</small></h1>
-
+      
       <div id="saveload">
 	<button id="save" type="button" class="btn btn-primary">Save</button>
 	<button id="load" type="button" class="btn btn-primary">Load</button>
       </div>
+      
       <ul class="nav nav-tabs" id="myTab">
-        <li><a href="#home" data-toggle="tab">Home</a>
-
-        </li>
-        <li><a href="#atoms" data-toggle="tab">Atoms</a>
-
-        </li>
-        <li><a href="#changelog" data-toggle="tab">Changelog</a>
-
-        </li>
+        <li><a href="#home" data-toggle="tab">Home</a></li>
+        <li><a href="#atoms" data-toggle="tab">Atoms</a></li>
+        <li><a href="#changelog" data-toggle="tab">Changelog</a></li>
       </ul>
+      
       <div class="tab-content">
         <div class="tab-pane fade in active" id="home">
+	  
           <h3>Click</h3>
+	  
           <button id="up_quark" type="button" class="btn btn-primary">Up Quark</button>
           <button id="electron" type="button" class="btn btn-primary">Electron</button>
           <button id="down_quark" type="button" class="btn btn-primary">Down Quark</button>
@@ -38,6 +39,7 @@
           <button id="proton" type="button" class="btn btn-primary">Proton (2 up quarks, 1 down quark)</button>
           <button id="neutron" type="button" class="btn btn-primary">Neutron (2 down quarks, 1 up quark)</button>
           <br></br>
+	  
           <table>
             <tr>
               <td>Up Quarks:</td>
@@ -86,7 +88,9 @@
             </tr>
           </table>
           
+	  
           <h3>Buy</h3>
+	  
           <button id="buy_up_quark_click" type="button" class="btn btn-primary">Up Quark Synthesiser (15 up quarks)</button>
           <button id="buy_electron_click" type="button" class="btn btn-primary">Electron Synthesiser (15 electrons)</button>
           <button id="buy_down_quark_click" type="button" class="btn btn-primary">Down Quark Synthesiser (15 down quarks)</button>
@@ -95,7 +99,8 @@
           <button id="buy_neutron_click" type="button" class="btn btn-primary">Neutron Synthesiser (15 neutrons)</button>
           <br></br>
           <button id="atom_recipe_unlock" type="button" class="btn btn-primary"><span id="atom_unlock_text">Unlock one atom recipe (15 protons, 15 electrons, 15 neutrons)</span></button>
-
+	  
+	  
           <h3>Upgrade</h3>
           
           <button id="upgrade_up_quark_click_1" type="button" class="btn btn-primary">
@@ -119,14 +124,18 @@
           <span id="upgrade_down_quark_click_1_text">(50 down quarks)</span>
           <br></br>
           
+          
           <h3>Discard <small>(no refunds)</small></h3>
+          
           <button id="sell_up_quark_click" type="button" class="btn btn-primary discard">Up Quark Synthesiser</button>
           <button id="sell_electron_click" type="button" class="btn btn-primary discard">Electron Synthesiser</button>
           <button id="sell_down_quark_click" type="button" class="btn btn-primary discard">Down Quark Synthesiser</button>
           <button id="sell_proton_click" type="button" class="btn btn-primary discard">Proton Synthesiser</button>
           <button id="sell_neutron_click" type="button" class="btn btn-primary discard">Neutron Synthesiser</button>
+          
         </div>
         
+	
         <div class="tab-pane fade" id="atoms">
           <br></br>
           <table><tr><td>
@@ -169,50 +178,39 @@
                 <button id="atom_creator" type="submit" class="btn btn-primary">Create your atom!</button>
           </td></tr></table>
           <br></br>
-          <p><span id="hydrogen_1_protium_name">Not Discovered:</span>  <span id="hydrogen_1_protium_count">0</span>
-
-            <br /> <span id="hydrogen_2_deuterium_name">Not Discovered:</span>  <span id="hydrogen_2_deuterium_count">0</span>
-
-            <br /> <span id="hydrogen_3_tritium_name">Not Discovered:</span>  <span id="hydrogen_3_tritium_count">0</span>
-
-            <br /> <span id="helium_3_name">Not Discovered:</span>  <span id="helium_3_count">0</span>
-
-            <br /> <span id="helium_4_name">Not Discovered:</span>  <span id="helium_4_count">0</span>
-
-            <br /> <span id="lithium_6_name">Not Discovered:</span>  <span id="lithium_6_count">0</span>
-
-            <br /> <span id="lithium_7_name">Not Discovered:</span>  <span id="lithium_7_count">0</span>
-
-            <br /> <span id="beryllium_9_name">Not Discovered:</span>  <span id="beryllium_9_count">0</span>
-            
-            <br /> <span id="beryllium_7_name">Not Discovered:</span>  <span id="beryllium_7_count">0</span>
-            
-            <br /> <span id="beryllium_10_name">Not Discovered:</span>  <span id="beryllium_10_count">0</span>
-            
-            <br /> <span id="beryllium_11_name">Not Discovered:</span>  <span id="beryllium_11_count">0</span>
-            
-            <br /> <span id="beryllium_12_name">Not Discovered:</span>  <span id="beryllium_12_count">0</span>
-            
-            <br /> <span id="boron_10_name">Not Discovered:</span>  <span id="boron_10_count">0</span>
-            
-            <br /> <span id="boron_11_name">Not Discovered:</span>  <span id="boron_11_count">0</span>
+          <p>
+	    <span id="hydrogen_1_protium_name">Not Discovered:</span>  <span id="hydrogen_1_protium_count">0</span> <br>
+	    <span id="hydrogen_2_deuterium_name">Not Discovered:</span>  <span id="hydrogen_2_deuterium_count">0</span> <br>
+	    <span id="hydrogen_3_tritium_name">Not Discovered:</span>  <span id="hydrogen_3_tritium_count">0</span> <br>
+	    <span id="helium_3_name">Not Discovered:</span>  <span id="helium_3_count">0</span> <br>
+	    <span id="helium_4_name">Not Discovered:</span>  <span id="helium_4_count">0</span> <br>
+	    <span id="lithium_6_name">Not Discovered:</span>  <span id="lithium_6_count">0</span> <br>
+	    <span id="lithium_7_name">Not Discovered:</span>  <span id="lithium_7_count">0</span> <br>
+	    <span id="beryllium_9_name">Not Discovered:</span>  <span id="beryllium_9_count">0</span> <br>
+	    <span id="beryllium_7_name">Not Discovered:</span>  <span id="beryllium_7_count">0</span> <br>
+	    <span id="beryllium_10_name">Not Discovered:</span>  <span id="beryllium_10_count">0</span> <br>
+	    <span id="beryllium_11_name">Not Discovered:</span>  <span id="beryllium_11_count">0</span> <br>
+	    <span id="beryllium_12_name">Not Discovered:</span>  <span id="beryllium_12_count">0</span> <br>
+	    <span id="boron_10_name">Not Discovered:</span>  <span id="boron_10_count">0</span> <br>
+	    <span id="boron_11_name">Not Discovered:</span>  <span id="boron_11_count">0</span>
           </p>
         </div>
         
         <div class="tab-pane fade" id="changelog">
           <h1>Revision 28</h1>
-          
           <p>+ Revised Layout</p>
+	  
           <h1>Revision 27</h1>
-          
           <p>+ 6 New Atoms</p>
+	  
           <h1>Revision 26</h1>
-
           <p>+ New Atom</p>
+	  
           <h1>Revision 23</h1>
-
-          <p>+ Changelog Tab
-            <br />+ Sell Button for Synthesisers</p>
+          <p>
+	    + Changelog Tab<br />
+	    + Sell Button for Synthesisers
+	  </p>
         </div>
       </div>
       <script>
